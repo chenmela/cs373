@@ -1,6 +1,6 @@
-TARGET = program1
+TARGET = chen_p1
 CFLAGS = -Wall -Wextra -DDEBUG -g -pedantic -std=c++14
-SOURCE = program1.cpp TuringMachine.h TuringMachine.cpp Makefile
+SOURCE = chen_p1.cpp TuringMachine.h TuringMachine.cpp Makefile
 
 all: $(TARGET)
 
@@ -12,16 +12,3 @@ $(TARGET).o: $(TARGET).cpp
 
 TuringMachine.o: TuringMachine.cpp
 	g++ $(CFLAGS) -c TuringMachine.cpp -o TuringMachine.o
-
-run: all
-	./$(TARGET) program1.txt $$000111$$ 5
-
-checkmem: all
-	valgrind ./$(TARGET)
-
-clean:
-	-rm *.o $(TARGET)
-
-zip:
-	make clean
-	zip -r program1 $(SOURCE)
