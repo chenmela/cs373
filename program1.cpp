@@ -12,6 +12,11 @@ int main(int argc, char** argv) {
 	//Read in filename, input string, and max num transitions
 
 	//Do we need to catch errors where arguments are incorrect?
+	/*
+	 * for (int i = 0; i < argc; i++) {
+		std::cout << i << ": " << argv[i] << std::endl;
+	}
+	*/
 	std::string filename = argv[1];
 	std::string inputString = argv[2];
 	int maxTransitions = atoi(argv[3]);

@@ -14,7 +14,7 @@ TuringMachine.o: TuringMachine.cpp
 	g++ $(CFLAGS) -c TuringMachine.cpp -o TuringMachine.o
 
 run: all
-	./$(TARGET) program1.txt 000111 500
+	./$(TARGET) program1.txt $$000111$$ 5
 
 checkmem: all
 	valgrind ./$(TARGET)
